@@ -19,7 +19,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        coinText.text = "Coin Needed : " + tempKey.ToString();
+        if(temKey >= 0)
+        {
+            coinText.text = "Coin Needed : " + tempKey.ToString();
+        }
+        
         timer();
 
         if (currentTime <= 0)
